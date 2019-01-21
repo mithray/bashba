@@ -2,12 +2,12 @@ I believe there is a need to make a unified meta system of linux commands.
 This command set must be able to do anything that can be done with an ordinary set of linux commands, but they should be intuitive and easier to learn grok quickly.
 
 rules
-1) It must be faster to learn than the full set of Linux commands
-2) It must cover at least the same domain as the full set of Linux commands
-3) It must be faster to type on average than the full set of Linux commands 
-4) It must be moving toward being the fastest way to type and express any desired linux command
-5) It must be moving toward using the fastest algoritms possible.
-6) It must demonstrably meet the above standards
+1. It must be faster to learn than the full set of Linux commands
+2. It must cover at least the same domain as the full set of Linux commands
+3. It must be faster to type on average than the full set of Linux commands 
+4. It must be moving toward being the fastest way to type and express any desired linux command
+5. It must be moving toward using the fastest algoritms possible.
+6. It must demonstrably meet the above standards
 
 it seems that there are three ways of accessing a file so perhaps all commands could be broken into these three categories? read, write and execute.
 
@@ -31,13 +31,13 @@ this command can be used to read or view anything, system resources, files, syst
 System info could be referenced by names which are stored in shell variables.
 
 EXAMPLES
-
-r 						r by itself works like *ls*. it uses defaults such as max-depth=1 min-depth=1 and just prints the files in the current directory
-r r:d					works like *find* with no arguments, searching all directories for all files
-r :c					works like *cat*. prints the contents for each file listed in the source. Given no source it 'cats' all files in the working directory.
-r r:fn					prints all the contents of all files recursively in all child directories
+``` bash
+r 				#r by itself works like *ls*. it uses defaults such as max-depth=1 min-depth=1 and just prints the files in the current directory
+r r:d			#works like *find* with no arguments, searching all directories for all files
+r :c			#works like *cat*. prints the contents for each file listed in the source. Given no source it 'cats' all files in the working directory.
+r r:fn			#prints all the contents of all files recursively in all child directories
 r r:fn m=*		
-----
+```
 write, w
 
 execute, x
