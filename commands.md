@@ -1,4 +1,3 @@
-I believe there is a need to make a unified meta system of linux commands.
 This command set must be able to do anything that can be done with an ordinary set of linux commands, but they should be intuitive and easier to learn grok quickly.
 
 rules
@@ -9,6 +8,7 @@ rules
 5. It must be moving toward using the fastest algoritms possible.
 6. It must demonstrably meet the above standards
 
+CRUD stands for Create, Read, Update, Delete. 
 it seems that there are three ways of accessing a file so perhaps all commands could be broken into these three categories? read, write and execute.
 
 an issue here is that only having three global commands in the namespace is actually an inefficient language. The more words that are in a language, the more potential it has of expressing many things in fewer words. One slight remedy could be to put 'r' as the default, this way r never needs to be typed and its arguments would be equivalent to a namespace/vocabulary.

@@ -33,7 +33,7 @@
 
 ### Major
 
-1.	small relates to the efficiency of m x n = e. m+n=size. m*n=expressiveness. If a language is larger it can be more expressive, but the language itself takes up more space. if m = (number of words in a language) and n=(number of words in an expression), then m x n is greatest when m and n have similar values. So depending on the requirements(e=expressiveness), the language should grow or shrink accordingly to reach maximum efficiency.
+1.	small relates to the efficiency of m x n = e. m+n=size. m*n=expressiveness. If a language is larger it can be more expressive, but the language itself takes up more space and a longer time to learn. if m = (number of words in a language) and n=(number of words in an expression), then m x n is greatest when m and n have similar values. So depending on the requirements(e=expressiveness), the language should grow or shrink accordingly to reach maximum efficiency.
 2.	words should have distinct boundaries. words should be able to be taken in and out of a language without destroying the language.
 3.	development should be incremental, gradually working in features and testing(?). (Anything is possible if it is broken into small enough steps ? )
 4.	Better to be Larger in Size and Lower in Speed than to be available on less systems.
