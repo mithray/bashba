@@ -32,10 +32,10 @@ System info could be referenced by names which are stored in shell variables.
 
 EXAMPLES
 ``` bash
-r 				#r by itself works like *ls*. it uses defaults such as max-depth=1 min-depth=1 and just prints the files in the current directory
-r r:d			#works like *find* with no arguments, searching all directories for all files
-r :c			#works like *cat*. prints the contents for each file listed in the source. Given no source it 'cats' all files in the working directory.
-r r:fn			#prints all the contents of all files recursively in all child directories
+r 			# r by itself works like *ls*. it uses defaults such as max-depth=1 min-depth=1 and just prints the files in the current directory
+r r:d			# works like *find* with no arguments, searching all directories for all files
+r :c			# works like *cat*. prints the contents for each file listed in the source. Given no source it 'cats' all files in the working directory.
+r r:fn			# prints all the contents of all files recursively in all child directories
 r r:fn m=*		
 ```
 write, w
