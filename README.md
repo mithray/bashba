@@ -71,6 +71,7 @@ read, r
 
 replaces ls, find, cat and grep
 
+```
 read 
 source,sor:						-;.
 match,mtc,m:					*;regex
@@ -80,6 +81,7 @@ recursive-min-depth,mxd:		1;[0-9]*;finalnode,fn
 permissions,per:				all
 file-size,sz:					all	
 output-format,ofm:	txt;json;csv;smart
+```
 
 this command can be used to read or view anything, system resources, files, system searches, web searches. The key is this is read, not write not execute.
 System info could be referenced by names which are stored in shell variables.
