@@ -1,8 +1,0 @@
-radioactive.py
-setup.py
-Radioactive_Terminal.egg-info/PKG-INFO
-Radioactive_Terminal.egg-info/SOURCES.txt
-Radioactive_Terminal.egg-info/dependency_links.txt
-Radioactive_Terminal.egg-info/entry_points.txt
-Radioactive_Terminal.egg-info/requires.txt
-Radioactive_Terminal.egg-info/top_level.txt
