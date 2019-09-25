@@ -1,17 +1,65 @@
-#!/usr/bin/python3
+#from prompt_toolkit import prompt
+#from prompt_toolkit.history import FileHistory
+#from prompt_toolkit.auto_suggest import AutoSuggestFromHistory
+#from prompt_toolkit.contrib.completers import WordCompleter
 
-import os
-import cmd
-import argparse
+#while 1:
+#  history        = FileHistory('history.txt')
+#  auto_suggest   = AutoSuggestFromHistory()
+#  completer      =  WordCompleter(['select', 'from', 'insert', 'update', 'delete', 'drop'], ignore_case=False)
+#  user_input     = prompt( prompt_sign, history=history, auto_suggest=auto_suggest, completer=completer )
+#  print(user_input)
 
-class bashba(cmd.Cmd):
-	intro = 'welcome to the bashba shell!'
-	prompt = '> '
+from __future__ import unicode_literals
+from prompt_toolkit import PromptSession
+from prompt_toolkit.completion import WordCompleter
+from prompt_toolkit.lexers import PygmentsLexer
+from prompt_toolkit.styles import Style
+from pygments.lexers.sql import SqlLexer
 
-	def do_r(self, args):
-		'read from the file system'
-		filenames = os.listdir()
-		print(filenames)
-		print(args)
+sql_completer = WordCompleter([
+    'abort', 'action', 'add', 'after', 'all', 'alter', 'analyze', 'and',
+    'as', 'asc', 'attach', 'autoincrement', 'before', 'begin', 'between',
+    'by', 'cascade', 'case', 'cast', 'check', 'collate', 'column',
+    'commit', 'conflict', 'constraint', 'create', 'cross', 'current_date',
+    'current_time', 'current_timestamp', 'database', 'default',
+    'deferrable', 'deferred', 'delete', 'desc', 'detach', 'distinct',
+    'drop', 'each', 'else', 'end', 'escape', 'except', 'exclusive',
+    'exists', 'explain', 'fail', 'for', 'foreign', 'from', 'full', 'glob',
+    'group', 'having', 'if', 'ignore', 'immediate', 'in', 'index',
+    'indexed', 'initially', 'inner', 'insert', 'instead', 'intersect',
+    'into', 'is', 'isnull', 'join', 'key', 'left', 'like', 'limit',
+    'match', 'natural', 'no', 'not', 'notnull', 'null', 'of', 'offset',
+    'on', 'or', 'order', 'outer', 'plan', 'pragma', 'primary', 'query',
+    'raise', 'recursive', 'references', 'regexp', 'reindex', 'release',
+    'rename', 'replace', 'restrict', 'right', 'rollback', 'row',
+    'savepoint', 'select', 'set', 'table', 'temp', 'temporary', 'then',
+    'to', 'transaction', 'trigger', 'union', 'unique', 'update', 'using',
+    'vacuum', 'values', 'view', 'virtual', 'when', 'where', 'with',
+    'without'], ignore_case=True)
 
-bashba().cmdloop("type help for help")
+style = Style.from_dict({
+    'completion-menu.completion': 'bg:#333333 #aaaaee',
+    'completion-menu.completion.current': 'bg:#222222 #8888ff',
+    'scrollbar.background': 'bg:#0000ff',
+    'scrollbar.button': 'bg:#222222',
+})
+
+def main():
+   session = PromptSession(
+       lexer=PygmentsLexer(SqlLexer), completer=sql_completer, style=style)
+
+   while True:
+       try:
+#           text = session.prompt('> ')
+           text = session.prompt('☢ » ')
+       except KeyboardInterrupt:
+           continue
+       except EOFError:
+           break
+       else:
+           print('You entered:', text)
+   print('GoodBye!')
+
+if __name__ == '__main__':
+    main()
