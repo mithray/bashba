@@ -147,3 +147,5 @@ fdisk -l #
 
 ```
 
+
+https://github.com/gparker42/zsh-dirnav
